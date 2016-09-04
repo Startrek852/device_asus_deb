@@ -24,8 +24,6 @@ on early-init
     write /sys/devices/virtual/graphics/fb0/rgb "32768 32768 32768"
 
 on init
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     # Set permissions for persist partition
