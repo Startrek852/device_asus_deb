@@ -28,6 +28,11 @@ PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := ASUS
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=razorg \
+    BUILD_FINGERPRINT=google/razorg/flo:6.0.1/MOB30X/3036618:user/release-keys \
+    PRIVATE_BUILD_DESC="razorg-user 6.0.1 MOB30X 3036618 release-keys"
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/deb/device.mk)
 $(call inherit-product-if-exists, vendor/asus/deb/deb-vendor.mk)
