@@ -10,3 +10,6 @@ DEVICE_PROVISIONED=1
 #Display Traditional Chinese/Simplified Chinese carriers name
 persist.radio.use_cc_names=true
 qcom.bluetooth.soc=smd
+
+# Storage
+ro.sys.sdcardfs=true
