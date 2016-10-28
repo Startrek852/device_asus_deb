@@ -1,0 +1,2 @@
+add_lunch_combo aicp_deb-userdebug
+add_lunch_combo aicp_deb-eng
