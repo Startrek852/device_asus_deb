@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,20 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/asus/deb/aosp_deb.mk)
 
-TARGET_BOOTLOADER_BOARD_NAME := deb
-TARGET_BOOTLOADER_NAME := deb
-TARGET_BOARD_INFO_FILE := device/asus/deb/board-info.txt
+PRODUCT_NAME := full_deb
 
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.deb
-
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/deb
-
-TARGET_SYSTEM_PROP := device/asus/flo/system.prop device/asus/deb/system.prop
-
-TARGET_RECOVERY_FSTAB = device/asus/deb/fstab.deb
-
-BOARD_SEPOLICY_DIRS += device/asus/deb/sepolicy
-
--include vendor/asus/deb/BoardConfigVendor.mk
-include device/asus/flo/BoardConfigCommon.mk
+$(call inherit-product-if-exists, vendor/asus/deb/deb-vendor.mk)
